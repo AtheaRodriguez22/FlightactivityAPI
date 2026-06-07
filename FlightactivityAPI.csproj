@@ -11,4 +11,16 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="FLIGHTLoyaltyCardAppService">
+      <HintPath>..\RODRIGUEZFLIGHTLoyaltyCard.git\bin\Debug\net9.0\FLIGHTLoyaltyCardAppService.dll</HintPath>
+    </Reference>
+    <Reference Include="FLIGHTLoyaltyCardDataService">
+      <HintPath>..\RODRIGUEZFLIGHTLoyaltyCard.git\bin\Debug\net9.0\FLIGHTLoyaltyCardDataService.dll</HintPath>
+    </Reference>
+    <Reference Include="FLIGHTLoyaltyCardModels">
+      <HintPath>..\RODRIGUEZFLIGHTLoyaltyCard.git\bin\Debug\net9.0\FLIGHTLoyaltyCardModels.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

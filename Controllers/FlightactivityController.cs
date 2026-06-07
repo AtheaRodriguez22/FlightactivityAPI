@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FLIGHTLoyaltyCardDataService;
+using FLIGHTLoyaltyCardModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FlightactivityAPI.Controllers
@@ -7,5 +9,17 @@ namespace FlightactivityAPI.Controllers
     [ApiController]
     public class FlightactivityController : ControllerBase
     {
+        private readonly LoyaltyDataService _dataService;
+        public FlightactivityController()
+        {
+            _dataService = new LoyaltyDataService();
+        }
+
+        [HttpGet]
+        public ActionResult<IEnumerable<LoyaltyAccount>> GetAllAccounts()
+        {
+            var accounts = _dataService.GetAccounts();
+            return Ok(accounts);
+        }
     }
 }
